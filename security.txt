@@ -1,0 +1,28 @@
+# ═══════════════════════════════════════════════════════════
+# KANZULILM INTERNATIONAL — Security Policy
+# https://kanzulilm.com/.well-known/security.txt
+# Standard: RFC 9116
+# ═══════════════════════════════════════════════════════════
+
+Contact: mailto:info@kanzulilm.com
+Contact: https://wa.me/923244449333
+
+Expires: 2030-12-31T23:59:59Z
+
+Preferred-Languages: en, ur
+
+Canonical: https://kanzulilm.com/.well-known/security.txt
+
+# ═══ REPORTING GUIDELINES ═══
+# If you have discovered a security vulnerability in our website
+# or services, please report it responsibly by contacting us at
+# info@kanzulilm.com with subject line: [SECURITY REPORT]
+#
+# We appreciate responsible disclosure and will acknowledge all
+# valid reports within 72 hours.
+#
+# Please do not publicly disclose vulnerabilities before we have
+# had a reasonable opportunity to address them.
+#
+# Kanzulilm International — Est. 2009
+# Online Islamic Academy | kanzulilm.com

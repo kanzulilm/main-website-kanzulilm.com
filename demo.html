@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO META ═══ -->
+  <title>Islamic Audio Library — Coming Soon | Kanzulilm</title>
+  <meta name="description" content="Kanzulilm International's free Islamic Audio Library — authentic Quran recitations, Adhan recordings and blessed Duas — launching very soon. Est. 2009." />
+  <meta name="keywords" content="Islamic audio library, Quran recitation online, listen Quran online, Adhan recordings, Islamic duas audio, online Quran listen, Kanzulilm audio, free Islamic audio, Kanz-ul-Ilm International, Kanzul Ilm International, Kanz ul Ilm International, Kanz-ul-Ilm, Kanzul Ilm, Kanz ul Ilm, کنزالعلم انٹرنیشنل, کنزالعلم" />
+  <meta name="author" content="Kanzulilm International" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://kanzulilm.com/demo" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kanzulilm.com/demo" />
+  <meta property="og:title" content="Islamic Audio Library — Coming Soon | Kanzulilm" />
+  <meta property="og:description" content="Kanzulilm International's free Islamic Audio Library — authentic Quran recitations, Adhan recordings and blessed Duas — launching very soon. Est. 2009." />
+  <meta property="og:image" content="https://kanzulilm.com/ogcover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Kanzulilm International" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Islamic Audio Library — Coming Soon | Kanzulilm" />
+  <meta name="twitter:description" content="Kanzulilm International's free Islamic Audio Library — authentic Quran recitations, Adhan recordings and blessed Duas — launching very soon. Est. 2009." />
+  <meta name="twitter:image" content="https://kanzulilm.com/ogcover.jpg" />
+  <meta name="twitter:image:alt" content="Kanzulilm International — Free Islamic Audio Library | Quran Recitations &amp; Duas" />
+  <meta property="og:image:alt" content="Kanzulilm International — Free Islamic Audio Library | Quran Recitations &amp; Duas" />
+
+  <!-- PWA Manifest & Icons -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/appletouchicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon16x16.png" />
+  <meta name="theme-color" content="#020617" />
+
+  <!-- Geo & Language -->
+  <meta name="geo.region" content="PK" />
+  <meta name="geo.placename" content="Pakistan" />
+  <link rel="alternate" hreflang="en" href="https://kanzulilm.com/demo" />
+  <link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/demo" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Islamic Audio Library — Coming Soon","url":"https://kanzulilm.com/demo","description":"Kanzulilm International's free Islamic Audio Library featuring authentic Quran recitations, Adhan recordings and Islamic duas — launching soon.","isPartOf":{"@type":"WebSite","name":"Kanzulilm International","url":"https://kanzulilm.com"},"provider":{"@type":"EducationalOrganization","name":"Kanzulilm International","alternateName":["Kanz-ul-Ilm International","Kanzul Ilm International","Kanz ul Ilm International","Kanz-ul-Ilm","Kanzulilm","Kanzul Ilm","Kanz ul Ilm","کنزالعلم انٹرنیشنل","کنزالعلم"],"url":"https://kanzulilm.com","foundingDate":"2009"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Kanzulilm International","alternateName":["Kanz-ul-Ilm International","Kanzul Ilm International","Kanz ul Ilm International","Kanz-ul-Ilm","Kanzulilm","Kanzul Ilm","Kanz ul Ilm","کنزالعلم انٹرنیشنل","کنزالعلم"],"url":"https://kanzulilm.com","description":"Premium online Islamic academy offering 1-on-1 Quran, Tajweed, Dars-e-Nizami, Arabic and Persian courses.","foundingDate":"2009","contactPoint":{"@type":"ContactPoint","telephone":"+92-324-4449333","contactType":"admissions","email":"admissions@kanzulilm.com"},"areaServed":["US","GB","CA","AU","worldwide"]}</script>
+
+  <!-- Tailwind & Lucide -->
+  <link rel="stylesheet" href="tailwind.css">
+  <script src="https://unpkg.com/lucide@1.20.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- OneSignal -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({ appId: "3b504caa-1894-40a9-a025-e2bebde8f9a2" });
+    });
+  </script>
+
+  <style>
+    /* ═══ CSS VARIABLES — DARK (default) ═══ */
+    :root {
+      --bg:       #020617;
+      --bg2:      #0a1628;
+      --bg3:      #0f1e35;
+      --card-bg:  rgba(255,255,255,0.04);
+      --card-border: rgba(212,175,55,0.18);
+      --text:     #f0f4ff;
+      --text-sub: #c0c8d8;
+      --text-mute: rgba(192,200,216,0.55);
+      --gold1:    #f7e0a3;
+      --gold2:    #d4af37;
+      --gold3:    #b8860b;
+      --input-bg: rgba(255,255,255,0.05);
+      --input-border: rgba(212,175,55,0.25);
+      --nav-bg:   rgba(2,6,23,0.72);
+      --nav-border: rgba(212,175,55,0.12);
+      --footer-bg: #020617;
+      --shadow-card: 0 24px 60px rgba(212,175,55,0.15);
+    }
+    /* ═══ LIGHT MODE ═══ */
+    [data-theme="light"] {
+      --bg:       #f8f6f0;
+      --bg2:      #edeae0;
+      --bg3:      #e4dfd3;
+      --card-bg:  rgba(255,255,255,0.75);
+      --card-border: rgba(180,140,20,0.3);
+      --text:     #0d1b2e;
+      --text-sub: #1e2f4a;
+      --text-mute: #3a4a5c;
+      --gold1:    #a07c00;
+      --gold2:    #b8860b;
+      --gold3:    #8a6200;
+      --input-bg: rgba(255,255,255,0.8);
+      --input-border: rgba(180,140,20,0.35);
+      --nav-bg:   rgba(248,246,240,0.88);
+      --nav-border: rgba(180,140,20,0.2);
+      --footer-bg: #e8e3d8;
+      --shadow-card: 0 24px 60px rgba(180,140,20,0.15);
+    }
+    [data-theme="light"] body { background: var(--bg); }
+    [data-theme="light"] body::before { opacity: 0.15; }
+    [data-theme="light"] .section-title { color: #0d1b2e; }
+    [data-theme="light"] #urgency-banner { background: var(--gold2); color: #020617; }
+    [data-theme="light"] .arabic-divider { color: rgba(150,110,0,0.5); }
+    [data-theme="light"] .glass { background: rgba(255,255,255,0.65); }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+      transition: background 0.35s, color 0.35s;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(212,175,55,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(10,22,40,0.9) 0%, transparent 70%);
+      pointer-events: none;
+      transition: opacity 0.35s;
+    }
+
+    .gold-text {
+      background: linear-gradient(to right, var(--gold1), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      backdrop-filter: blur(18px) saturate(160%);
+      border-radius: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease, border-color 0.25s;
+    }
+    .glass::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -110%;
+      width: 60%; height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(247,224,163,0.18) 50%, transparent 100%);
+      transform: skewX(-20deg);
+      transition: left 0.55s ease;
+      pointer-events: none;
+    }
+    .glass:hover::after { left: 130%; }
+    .glass:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(212,175,55,0.4);
+    }
+    #navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--nav-bg);
+      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--nav-border);
+      transition: background 0.3s;
+    }
+    #urgency-banner {
+      background: linear-gradient(to right, #b8860b, #d4af37, #b8860b);
+      color: #020617;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      animation: banner-pulse 3s ease-in-out infinite;
+      position: relative; z-index: 101;
+    }
+    @keyframes banner-pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.5); }
+      50%      { box-shadow: 0 0 18px 4px rgba(212,175,55,0.35); }
+    }
+    .wa-fab {
+      position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 999;
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.45);
+      animation: wa-wave 2.2s ease-in-out infinite;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .wa-fab:hover { transform: scale(1.08); }
+    @keyframes wa-wave {
+      0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6), 0 4px 24px rgba(37,211,102,0.4); }
+      50%      { box-shadow: 0 0 0 16px rgba(37,211,102,0), 0 4px 24px rgba(37,211,102,0.4); }
+    }
+    #scroll-top {
+      position: fixed; bottom: 6rem; right: 1.75rem; z-index: 998;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+      color: var(--gold1);
+    }
+    #scroll-top.visible { opacity: 1; pointer-events: auto; }
+    #scroll-top:hover { transform: scale(1.1); border-color: rgba(212,175,55,0.5); }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--text);
+    }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    .arabic-divider { font-family: 'Amiri', serif; font-size: 1.5rem; text-align: center; color: rgba(212,175,55,0.4); letter-spacing: 0.2em; margin: 0.5rem 0; }
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    #theme-toggle {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--gold1);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    #theme-toggle:hover { transform: scale(1.1); border-color: rgba(212,175,55,0.5); }
+    #articles-modal {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(2,6,23,0.85);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      align-items: center; justify-content: center; padding: 1.5rem;
+    }
+    #articles-modal.open { display: flex; }
+    .modal-box {
+      background: var(--bg2);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      max-width: 520px; width: 100%;
+      text-align: center;
+      -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+    }
+    .glass-btn {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(212,175,55,0.35);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border-radius: 999px;
+      color: var(--gold1);
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.3s;
+    }
+    .glass-btn:hover {
+      transform: scale(1.02);
+      border-color: rgba(212,175,55,0.7);
+      box-shadow: 0 0 24px rgba(212,175,55,0.4), 0 0 48px rgba(212,175,55,0.2);
+      background: rgba(255,255,255,0.10);
+    }
+    .impact-strip {
+      background: linear-gradient(to right, rgba(212,175,55,0.08), rgba(212,175,55,0.04), rgba(212,175,55,0.08));
+      border-top: 1px solid rgba(212,175,55,0.15);
+      border-bottom: 1px solid rgba(212,175,55,0.15);
+    }
+    .nav-academic-link {
+      position: relative;
+      padding-bottom: 4px;
+      text-decoration: none;
+      color: var(--text-sub);
+      transition: color 0.2s;
+    }
+    .nav-academic-link:hover { color: var(--gold1) !important; }
+    .nav-academic-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1.5px;
+      bottom: 0; left: 0;
+      background: var(--gold1);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .nav-academic-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .footer-links-column a {
+      position: relative !important;
+      padding-bottom: 4px;
+    }
+    .footer-links-column a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1.5px;
+      bottom: 0; left: 0;
+      background: var(--gold1);
+      transition: width 0.3s ease;
+    }
+    .footer-links-column a:hover::after { width: 100%; }
+    #pwa-banner {
+      display: none; position: fixed; bottom: 7rem; left: 1rem; right: 1rem;
+      z-index: 990; max-width: 420px; margin: 0 auto;
+      background: var(--bg2);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-radius: 1rem; padding: 1rem 1.25rem;
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    }
+    #cookie-banner {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 980;
+      background: var(--bg2); border-top: 1px solid rgba(212,175,55,0.2);
+      padding: 1rem 1.5rem;
+      -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    }
+    #cookie-banner.show { display: block; }
+    /* ═══ JAMEEL NOORI NASTALEEQ — URDU FONT ═══ */
+    @font-face {
+      font-family: 'Jameel Noori Nastaleeq';
+      src: url('fonts/JameelNooriNastaleeq.woff2') format('woff2'),
+           url('fonts/JameelNooriNastaleeq.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    /* Urdu text — Nastaleeq */
+    .urdu, [lang="ur"], .ur-text {
+      font-family: 'Jameel Noori Nastaleeq', 'Amiri', serif;
+      direction: rtl;
+      unicode-bidi: embed;
+      line-height: 2.2;
+      letter-spacing: 0;
+    }
+    /* Arabic Quranic text — Amiri */
+    .arabic-text, .arabic-divider {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      unicode-bidi: embed;
+    }
+    /* Preview track Arabic references */
+    .preview-track .track-ref {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      font-size: 0.78rem;
+      color: var(--gold1);
+      opacity: 0.85;
+      display: block;
+      margin-top: 0.15rem;
+    }
+    /* Section Urdu titles */
+    .section-ur-title {
+      font-family: 'Jameel Noori Nastaleeq', serif;
+      font-size: 1.3rem;
+      line-height: 2;
+      color: var(--gold1);
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .glass:hover { transform: none; }
+      .glass::after { display: none; }
+    }
+
+    /* ═══ COMING SOON SPECIFIC ═══ */
+    .cs-badge {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid rgba(212,175,55,0.35);
+      background: rgba(212,175,55,0.06);
+      border-radius: 999px;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold1);
+      margin-bottom: 2rem;
+    }
+    .pulse-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--gold2);
+      animation: dot-pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes dot-pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    /* Feature cards */
+    .feature-card {
+      display: flex; flex-direction: column; align-items: flex-start;
+      gap: 1rem; padding: 1.75rem;
+    }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.2);
+      flex-shrink: 0;
+    }
+
+    /* Benefit list */
+    .benefit-item {
+      display: flex; align-items: flex-start; gap: 0.85rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid rgba(212,175,55,0.08);
+    }
+    .benefit-item:last-child { border-bottom: none; }
+    .benefit-check {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+      color: var(--gold1); font-size: 0.65rem; font-weight: 700;
+    }
+
+    /* Countdown */
+    .countdown-box {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .cd-unit {
+      display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+    }
+    .cd-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(to bottom, var(--gold1), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      min-width: 70px; text-align: center;
+    }
+    .cd-label {
+      font-size: 0.65rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-mute);
+    }
+    .cd-sep {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem; color: rgba(212,175,55,0.3);
+      line-height: 1; align-self: flex-start; padding-top: 0.3rem;
+    }
+
+    /* Notify form */
+    .notify-form {
+      display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;
+      max-width: 480px; margin: 0 auto;
+    }
+    .notify-input {
+      flex: 1; min-width: 220px;
+      background: var(--input-bg);
+      border: 1px solid var(--input-border);
+      border-radius: 999px;
+      padding: 0.75rem 1.25rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .notify-input:focus { border-color: rgba(212,175,55,0.6); }
+    .notify-input::placeholder { color: var(--text-mute); }
+    .notify-btn {
+      background: linear-gradient(to right, var(--gold1), var(--gold2));
+      color: #020617;
+      font-weight: 700;
+      font-family: 'DM Sans', sans-serif;
+      padding: 0.75rem 1.75rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.875rem;
+      white-space: nowrap;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .notify-btn:hover { opacity: 0.9; transform: scale(1.02); }
+    #notify-success {
+      display: none;
+      color: var(--gold1);
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+    }
+
+    /* Audio preview cards (preview/teaser) */
+    .preview-track {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 0.875rem;
+      border: 1px solid rgba(212,175,55,0.12);
+      background: rgba(255,255,255,0.025);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .preview-track:hover {
+      border-color: rgba(212,175,55,0.3);
+      background: rgba(212,175,55,0.04);
+    }
+    .preview-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .preview-lock {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(212,175,55,0.06);
+      border: 1px solid rgba(212,175,55,0.2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold2); font-size: 0.7rem;
+    }
+
+    /* Stats strip */
+    .stat-item {
+      text-align: center; padding: 0 1.5rem;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      background: linear-gradient(to right, var(--gold1), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.75rem; color: var(--text-mute);
+      letter-spacing: 0.05em; margin-top: 0.2rem;
+    }
+  </style>
+</head>
+
+<body class="relative">
+
+<!-- ═══ URGENCY BANNER ═══ -->
+<div id="urgency-banner">
+  📢 New Admission Semester <span id="current-year-banner"></span>: Limited 1-on-1 personalized WhatsApp slots available for worldwide students.
+  <a href="https://wa.me/923244449333?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%DB%83%20%D8%A7%D9%84%D9%84%DB%81%20%D9%88%D8%A8%D8%B1%DA%A9%D8%A7%D8%AA%DB%81%0AI%20would%20like%20to%20book%20a%20free%20trial." target="_blank" rel="noopener" style="text-decoration:underline; font-weight:700; margin-left:6px;">Book your Free Trial today!</a>
+</div>
+
+<!-- ═══ STICKY NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5">
+      <img src="logo.png" alt="Kanzulilm International" class="h-10 w-auto" style="max-height:40px" fetchpriority="high" loading="eager" />
+      <div>
+        <div style="color:var(--text);font-weight:600;font-size:0.875rem;line-height:1.2">Kanzulilm</div>
+        <div style="color:var(--gold1);font-size:0.625rem;letter-spacing:0.15em;opacity:0.6;text-transform:uppercase">International</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center" style="font-size:0.8125rem;gap:1.1rem;flex-wrap:nowrap;">
+      <a href="/" class="nav-academic-link transition-colors" style="white-space:nowrap">Home</a>
+      <a href="/#legacy" class="nav-academic-link transition-colors" style="white-space:nowrap">Our Legacy</a>
+      <a href="/#testimonials" class="nav-academic-link transition-colors" style="white-space:nowrap">Testimonials</a>
+      <a href="/#reach" class="nav-academic-link transition-colors" style="white-space:nowrap">Global Reach</a>
+      <a href="/#courses" class="nav-academic-link transition-colors" style="white-space:nowrap">Courses</a>
+      <a href="https://articles.kanzulilm.com" target="_blank" rel="noopener" class="nav-academic-link transition-colors" style="white-space:nowrap">Articles</a>
+      <a href="/#spiritual-services" class="nav-academic-link transition-colors" style="white-space:nowrap">Spiritual Services</a>
+      <a href="/#fees" class="nav-academic-link transition-colors" style="white-space:nowrap">Tuition Fees</a>
+      <a href="/#contact" class="nav-academic-link transition-colors" style="white-space:nowrap">Contact</a>
+    </div>
+    <div class="flex items-center gap-2.5">
+      <button id="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+        <i data-lucide="sun" class="w-4 h-4" id="theme-icon"></i>
+      </button>
+      <a href="https://wa.me/923244449333?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%DB%83%20%D8%A7%D9%84%D9%84%87%20%D9%88%D8%A8%D8%B1%DA%A9%D8%A7%D8%AA%DB%81%0AI%20would%20like%20to%20access%20the%20Student%20Portal."
+         target="_blank" rel="noopener"
+         class="hidden lg:inline-flex items-center gap-1.5 glass-btn px-4 py-2 text-xs">
+        <i data-lucide="log-in" class="w-3.5 h-3.5"></i> Portal Access
+      </a>
+      <button id="hamburger" class="lg:hidden p-1" style="color:var(--text-sub)" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="flex-col px-5 pb-4 gap-3 border-t pt-3" style="font-size:0.875rem;color:var(--text-sub);border-color:rgba(212,175,55,0.1)">
+    <a href="/" class="block py-1">Home</a>
+    <a href="/#legacy" class="block py-1">Our Legacy</a>
+    <a href="/#testimonials" class="block py-1">Testimonials</a>
+    <a href="/#reach" class="block py-1">Global Reach</a>
+    <a href="/#courses" class="block py-1">Courses</a>
+    <a href="https://articles.kanzulilm.com" target="_blank" rel="noopener" class="block py-1">Articles</a>
+    <a href="/#spiritual-services" class="block py-1">Spiritual Services</a>
+    <a href="/#fees" class="block py-1">Tuition Fees</a>
+    <a href="/#contact" class="block py-1">Contact</a>
+    <a href="https://wa.me/923244449333" target="_blank" class="inline-flex items-center gap-1.5 glass-btn px-4 py-2 text-xs w-fit mt-1">
+      <i data-lucide="log-in" class="w-3.5 h-3.5"></i> Portal Access
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ HERO — COMING SOON ═══ -->
+<section class="relative z-10 max-w-4xl mx-auto px-5 pt-20 pb-12 text-center">
+  <div class="reveal">
+    <div class="cs-badge">
+      <div class="pulse-dot"></div>
+      <span>Coming Soon — Islamic Audio Library</span>
+    </div>
+    <div class="arabic-divider" style="font-size:2.5rem;margin-bottom:1.5rem">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+    <h1 class="section-title mb-5">
+      Free Islamic Audio Library<br/>
+      <span class="gold-text">Quran, Adhan &amp; Duas.</span>
+    </h1>
+    <p style="color:var(--text-sub);font-size:1rem;line-height:1.8;max-width:36rem;margin:0 auto 2rem">
+      We are carefully curating and recording an authentic collection of Quran recitations, Adhan recordings, and blessed Islamic duas — crafted for students, families, and seekers of knowledge worldwide. Launching very soon, in shaa Allah. <span class="urdu" style="display:block;margin-top:0.5rem;font-size:1.1rem;color:var(--gold1)">جلد آ رہا ہے — ان شاء اللہ</span>
+    </p>
+
+    <!-- Notify Me Form -->
+    <div style="margin-bottom:2.5rem">
+      <p style="color:var(--gold1);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.5rem;opacity:0.8">Get Notified at Launch</p><p class="urdu" style="color:var(--gold1);font-size:1rem;margin-bottom:0.75rem;opacity:0.85">لانچ پر اطلاع پائیں</p>
+      <div class="notify-form">
+        <input type="email" id="notify-email" class="notify-input" placeholder="Enter your email address" autocomplete="email" />
+        <button class="notify-btn" onclick="handleNotify()">Notify Me</button>
+      </div>
+      <p id="notify-success">✦ JazakAllah Khair — we will notify you at launch!</p>
+      <p style="color:var(--text-mute);font-size:0.75rem;margin-top:0.75rem">No spam. Unsubscribe anytime. We respect your privacy.</p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="https://wa.me/923244449333?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%DB%83%20%D8%A7%D9%84%D9%84%DB%81%20%D9%88%D8%A8%D8%B1%DA%A9%D8%A7%D8%AA%DB%81%0AI%20would%20like%20to%20book%20a%20free%20trial."
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:0.6rem;background:linear-gradient(to right,var(--gold1),var(--gold2));color:#020617;font-weight:700;padding:0.9rem 2rem;border-radius:999px;border:none;font-size:0.9rem;text-decoration:none;box-shadow:0 4px 20px rgba(212,175,55,0.35);transition:all 0.25s;">
+        <svg width="16" height="16" fill="#020617" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Book a Free Trial Class
+      </a>
+      <a href="/#courses"
+         style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.06);border:1px solid rgba(212,175,55,0.35);color:var(--gold1);font-weight:500;padding:0.9rem 2rem;border-radius:999px;font-size:0.9rem;text-decoration:none;transition:all 0.25s;">
+        <i data-lucide="book-open" class="w-4 h-4"></i>
+        View Our Courses
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS STRIP ═══ -->
+<div class="impact-strip py-10 relative z-10">
+  <div class="max-w-4xl mx-auto px-5">
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years Established</div>
+      </div>
+      <div style="width:1px;background:rgba(212,175,55,0.15);align-self:stretch"></div>
+      <div class="stat-item">
+        <div class="stat-num">14+</div>
+        <div class="stat-label">Audio Tracks Ready</div>
+      </div>
+      <div style="width:1px;background:rgba(212,175,55,0.15);align-self:stretch"></div>
+      <div class="stat-item">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Audio Categories</div>
+      </div>
+      <div style="width:1px;background:rgba(212,175,55,0.15);align-self:stretch"></div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Free Access</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ WHAT'S COMING — AUDIO CATEGORIES ═══ -->
+<section class="relative z-10 max-w-7xl mx-auto px-5 py-20">
+  <div class="text-center mb-14 reveal">
+    <p style="color:var(--gold1);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:0.75rem">What's Coming</p>
+    <h2 class="section-title mb-4">A Complete Treasury of<br/><span class="gold-text">Islamic Audio.</span></h2>
+    <p style="color:var(--text-sub);font-size:0.9375rem;line-height:1.75;max-width:40rem;margin:0 auto">
+      The most comprehensive free Islamic audio library in Urdu &amp; Arabic — Quranic Surahs, Quranic Duas, Hadith-proven Duas, Adhan, Adhkar and much more. Every track verified by certified Huffaz and Muftis of Kanzulilm International. Est. 2009.
+    </p>
+  </div>
+
+  <!-- ══ STATS ROW ══ -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 reveal">
+    <div class="glass p-5 text-center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;background:linear-gradient(to right,var(--gold1),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">30+</div>
+      <div style="font-size:0.75rem;color:var(--text-mute);margin-top:0.2rem">Quranic Surahs<br/><span class="urdu" style="font-size:0.9rem;color:var(--gold1)">قرآنی سورتیں</span></div>
+    </div>
+    <div class="glass p-5 text-center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;background:linear-gradient(to right,var(--gold1),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">50+</div>
+      <div style="font-size:0.75rem;color:var(--text-mute);margin-top:0.2rem">Duas from Quran &amp; Hadith<br/><span class="urdu" style="font-size:0.9rem;color:var(--gold1)">قرآن و حدیث کی دعائیں</span></div>
+    </div>
+    <div class="glass p-5 text-center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;background:linear-gradient(to right,var(--gold1),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">5+</div>
+      <div style="font-size:0.75rem;color:var(--text-mute);margin-top:0.2rem">Adhan Recordings<br/><span class="urdu" style="font-size:0.9rem;color:var(--gold1)">اذان ریکارڈنگ</span></div>
+    </div>
+    <div class="glass p-5 text-center">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;background:linear-gradient(to right,var(--gold1),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">100%</div>
+      <div style="font-size:0.75rem;color:var(--text-mute);margin-top:0.2rem">Free — No Login<br/><span class="urdu" style="font-size:0.9rem;color:var(--gold1)">بالکل مفت</span></div>
+    </div>
+  </div>
+
+  <!-- ══ CATEGORY 1: QURANIC SURAHS ══ -->
+  <div class="glass p-8 mb-8 reveal">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+      <div style="width:52px;height:52px;border-radius:14px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">📖</div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text)">Quranic Surahs<span class="section-ur-title">قرآنی سورتیں</span></h2>
+        <p style="color:var(--text-mute);font-size:0.8rem;margin-top:0.2rem">Recited with perfect Tajweed by certified Huffaz of Kanzulilm International</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="preview-track"><div class="preview-icon">1️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Fatiha — الفاتحہ</div><div style="font-size:0.72rem;color:var(--text-mute)">The Opening · 7 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">2️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Ayat ul Kursi — آیت الکرسی</div><div style="font-size:0.72rem;color:var(--text-mute)">Al-Baqarah 2:255 · Throne Verse</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">3️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Ikhlas — الاخلاص</div><div style="font-size:0.72rem;color:var(--text-mute)">Pure Monotheism · 4 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">4️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Falaq — الفلق</div><div style="font-size:0.72rem;color:var(--text-mute)">Dawn · Protection Surah · 5 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">5️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah An-Nas — الناس</div><div style="font-size:0.72rem;color:var(--text-mute)">Mankind · Protection Surah · 6 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">6️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Kafirun — الکافرون</div><div style="font-size:0.72rem;color:var(--text-mute)">The Disbelievers · 6 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">7️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Mulk — الملک</div><div style="font-size:0.72rem;color:var(--text-mute)">Sovereignty · 30 Verses · Night Surah</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">8️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Yaseen — یٰسٓ</div><div style="font-size:0.72rem;color:var(--text-mute)">Heart of the Quran · 83 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">9️⃣</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Ar-Rahman — الرحمٰن</div><div style="font-size:0.72rem;color:var(--text-mute)">The Most Merciful · 78 Verses</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🔟</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Waqiah — الواقعۃ</div><div style="font-size:0.72rem;color:var(--text-mute)">The Inevitable · 96 Verses · Rizq Surah</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">📿</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Kahf — الکہف</div><div style="font-size:0.72rem;color:var(--text-mute)">The Cave · 110 Verses · Friday Surah</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">⭐</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Surah Al-Baqarah — البقرۃ (Last 2)</div><div style="font-size:0.72rem;color:var(--text-mute)">Amanar Rasul · 285–286</div></div><div class="preview-lock">🔒</div></div>
+    </div>
+    <p style="color:var(--gold1);font-size:0.78rem;margin-top:1.25rem;opacity:0.85">+ مزید سورتیں launching soon — Manzil, Tabaraka, Al-Hashr last 3 verses and more</p>
+  </div>
+
+  <!-- ══ CATEGORY 2: QURANIC DUAS ══ -->
+  <div class="glass p-8 mb-8 reveal">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+      <div style="width:52px;height:52px;border-radius:14px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">📜</div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text)">Quranic Duas<span class="section-ur-title">قرآنی دعائیں</span></h2>
+        <p style="color:var(--text-mute);font-size:0.8rem;margin-top:0.2rem">Duas mentioned directly in the Holy Quran — with Arabic text and reference</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="preview-track"><div class="preview-icon">🌿</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua of Sayyiduna Ibrahim ﷺ</div><div style="font-size:0.72rem;color:var(--text-mute)">رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ — Ibrahim 14:40</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌊</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua of Sayyiduna Yunus ﷺ</div><div style="font-size:0.72rem;color:var(--text-mute)">لَا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ — Al-Anbiya 21:87</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">👶</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua of Sayyiduna Zakariyya ﷺ</div><div style="font-size:0.72rem;color:var(--text-mute)">رَبِّ لَا تَذَرْنِي فَرْدًا — Al-Anbiya 21:89</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">💎</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Parents — والدین کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي — Al-Isra 17:24</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">📚</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Knowledge — علم کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">رَّبِّ زِدْنِي عِلْمًا — Taha 20:114</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🛡️</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Steadfastness — ثابت قدمی</div><div style="font-size:0.72rem;color:var(--text-mute)">رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا — Al-Baqarah 2:250</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌅</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Good in Both Worlds</div><div style="font-size:0.72rem;color:var(--text-mute)">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً — Al-Baqarah 2:201</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">❤️</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua of Sayyiduna Musa ﷺ</div><div style="font-size:0.72rem;color:var(--text-mute)">رَبِّ اشْرَحْ لِي صَدْرِي — Taha 20:25</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🤲</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua of Forgiveness — استغفار</div><div style="font-size:0.72rem;color:var(--text-mute)">رَبَّنَا ظَلَمْنَا أَنفُسَنَا — Al-Araf 7:23</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌙</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua of Sayyiduna Ayyub ﷺ</div><div style="font-size:0.72rem;color:var(--text-mute)">أَنِّي مَسَّنِيَ الضُّرُّ — Al-Anbiya 21:83</div></div><div class="preview-lock">🔒</div></div>
+    </div>
+    <p style="color:var(--gold1);font-size:0.78rem;margin-top:1.25rem;opacity:0.85">+ مزید قرآنی دعائیں — Dua of Sayyiduna Nuh ﷺ, Dua Qunoot, Dua-e-Istiaza and more</p>
+  </div>
+
+  <!-- ══ CATEGORY 3: HADITH DUAS ══ -->
+  <div class="glass p-8 mb-8 reveal">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+      <div style="width:52px;height:52px;border-radius:14px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">🕌</div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text)">Hadith-Proven Duas<span class="section-ur-title">مسنون دعائیں</span></h2>
+        <p style="color:var(--text-mute);font-size:0.8rem;margin-top:0.2rem">Duas from authentic Hadith — Bukhari, Muslim, Tirmidhi, Abu Dawud — with full reference</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="preview-track"><div class="preview-icon">🌙</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua Before Sleeping — سونے کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">بِاسْمِكَ اللَّهُمَّ أَمُوتُ — Bukhari 6312</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">☀️</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua Upon Waking — جاگنے کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا — Bukhari 6314</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🍽️</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua Before Eating — کھانے کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ — Abu Dawud 3767</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🚿</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua Entering Bathroom — بیت الخلا کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ — Bukhari 142</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🏠</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua Entering Home — گھر داخل ہونے کی</div><div style="font-size:0.72rem;color:var(--text-mute)">بِسْمِ اللَّهِ وَلَجْنَا — Muslim 2018</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🚗</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Travel — سفر کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">سُبْحَانَ الَّذِي سَخَّرَ لَنَا — Muslim 1342</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌧️</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Rain — بارش کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ صَيِّبًا نَافِعًا — Bukhari 1032</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">💛</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Durood Ibrahim — درود ابراہیم</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ — Bukhari 3370</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🤒</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Illness — بیماری کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ رَبَّ النَّاسِ — Bukhari 5742</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">😟</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua for Anxiety — پریشانی کی دعا</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ إِنِّي عَبْدُكَ — Bukhari 6346</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🕌</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Dua After Adhan — اذان کے بعد</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ — Bukhari 614</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">📿</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Sayyidul Istighfar — سید الاستغفار</div><div style="font-size:0.72rem;color:var(--text-mute)">اللَّهُمَّ أَنْتَ رَبِّي — Bukhari 6306</div></div><div class="preview-lock">🔒</div></div>
+    </div>
+    <p style="color:var(--gold1);font-size:0.78rem;margin-top:1.25rem;opacity:0.85">+ مزید مسنون دعائیں — Dua for Mosque, Dua for Marriage, Dua-e-Qunoot, Morning &amp; Evening Adhkar (full set) and more</p>
+  </div>
+
+  <!-- ══ CATEGORY 4: ADHAN ══ -->
+  <div class="glass p-8 mb-8 reveal">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+      <div style="width:52px;height:52px;border-radius:14px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">🔊</div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text)">Adhan Recordings<span class="section-ur-title">اذان</span></h2>
+        <p style="color:var(--text-mute);font-size:0.8rem;margin-top:0.2rem">Authentic Adhan — for home use, mosques, newborn ear call, and digital platforms</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="preview-track"><div class="preview-icon">🌅</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Adhan — Fajr (with Tathwib)</div><div style="font-size:0.72rem;color:var(--text-mute)">الصلاة خير من النوم — Fajr Morning Call</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🕋</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Adhan — Madinah Style</div><div style="font-size:0.72rem;color:var(--text-mute)">Blessed Madinan recitation style</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌍</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Standard Adhan — عام اذان</div><div style="font-size:0.72rem;color:var(--text-mute)">Universal Islamic call to prayer</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">👶</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Adhan for Newborn — نومولود اذان</div><div style="font-size:0.72rem;color:var(--text-mute)">Soft recitation for newborn right ear</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🕌</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Iqamah — اقامت</div><div style="font-size:0.72rem;color:var(--text-mute)">Second call before Salah</div></div><div class="preview-lock">🔒</div></div>
+    </div>
+    <p style="color:var(--gold1);font-size:0.78rem;margin-top:1.25rem;opacity:0.85">+ Makkah-style Adhan, Jumu&apos;ah Adhan coming soon</p>
+  </div>
+
+  <!-- ══ CATEGORY 5: ADHKAR & TASBIH ══ -->
+  <div class="glass p-8 reveal">
+    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+      <div style="width:52px;height:52px;border-radius:14px;background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.2);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0">📿</div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text)">Adhkar &amp; Tasbih<span class="section-ur-title">اذکار و تسبیح</span></h2>
+        <p style="color:var(--text-mute);font-size:0.8rem;margin-top:0.2rem">Morning &amp; Evening Adhkar, post-Salah Tasbih, and powerful daily remembrance</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="preview-track"><div class="preview-icon">🌄</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Morning Adhkar — اذکار صباح</div><div style="font-size:0.72rem;color:var(--text-mute)">Complete morning remembrance set</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌆</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Evening Adhkar — اذکار مساء</div><div style="font-size:0.72rem;color:var(--text-mute)">Complete evening remembrance set</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🙏</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Post-Salah Tasbih — نماز کے بعد</div><div style="font-size:0.72rem;color:var(--text-mute)">SubhanAllah × 33, Alhamdulillah × 33</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">💫</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Tasbih-e-Fatima — تسبیح فاطمہ</div><div style="font-size:0.72rem;color:var(--text-mute)">سُبْحَانَ اللّٰه × 33, الحمد × 33, اللّٰه اکبر × 34</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">✨</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Kalimah Tayyibah — کلمہ طیبہ</div><div style="font-size:0.72rem;color:var(--text-mute)">لَا إِلَٰهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ</div></div><div class="preview-lock">🔒</div></div>
+      <div class="preview-track"><div class="preview-icon">🌟</div><div style="flex:1"><div style="font-size:0.875rem;font-weight:600;color:var(--text)">Istighfar Set — استغفار</div><div style="font-size:0.72rem;color:var(--text-mute)">أَسْتَغْفِرُ اللَّهَ — Daily 100 times</div></div><div class="preview-lock">🔒</div></div>
+    </div>
+    <p style="color:var(--gold1);font-size:0.78rem;margin-top:1.25rem;opacity:0.85">+ Dua Qunoot, Tashahhud, Duas of Salah, Jumu&apos;ah Adhkar and more coming soon</p>
+  </div>
+</section>
+
+<!-- ═══ WHY THIS LIBRARY — SEO BENEFITS SECTION ═══ -->
+<section class="relative z-10 max-w-7xl mx-auto px-5 pb-20">
+  <div class="text-center mb-14 reveal">
+    <p style="color:var(--gold1);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:0.75rem">Why Kanzulilm Audio Library</p>
+    <h2 class="section-title mb-4">Authentic. Free. Scholarly<br/><span class="gold-text">Supervised.</span></h2>
+    <p style="color:var(--text-sub);font-size:0.9375rem;line-height:1.75;max-width:36rem;margin:0 auto">
+      Unlike general audio platforms, every track in this library is recorded, reviewed, and approved by certified Huffaz and Muftis of Kanzulilm International — guaranteeing authenticity and Tajweed accuracy.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="glass p-8 reveal">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:1.25rem">
+        <span class="gold-text">Benefits</span> for Students &amp; Families
+      </h2>
+      <div>
+        <div class="benefit-item">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-bottom:0.2rem">Correct Tajweed Pronunciation</div>
+            <div style="color:var(--text-mute);font-size:0.825rem;line-height:1.6">Learn the exact makhaarij (articulation points) by listening to certified Huffaz — perfect for students studying Quran online.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-bottom:0.2rem">Daily Islamic Routine Support</div>
+            <div style="color:var(--text-mute);font-size:0.825rem;line-height:1.6">Access morning &amp; evening duas, pre-sleep and wake-up adhkar to build consistent Islamic daily habits for the whole family.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-bottom:0.2rem">Adhan for Every Occasion</div>
+            <div style="color:var(--text-mute);font-size:0.825rem;line-height:1.6">Authentic Adhan recordings including the Madinan style and Fajr Adhan with Tathwib — for mosques, home use, and newborn ear Adhan.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-bottom:0.2rem">100% Free — No Account Needed</div>
+            <div style="color:var(--text-mute);font-size:0.825rem;line-height:1.6">No subscription, no registration. Open access for Muslims in UK, USA, Canada, Australia, Europe and worldwide.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-bottom:0.2rem">Scholar-Verified Authenticity</div>
+            <div style="color:var(--text-mute);font-size:0.825rem;line-height:1.6">Every audio track reviewed by our Mufti-led panel — certified under Dars-e-Nizami scholarly supervision since 2009.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-bottom:0.2rem">Ideal for Kids Learning Quran</div>
+            <div style="color:var(--text-mute);font-size:0.825rem;line-height:1.6">Clear, slow recitations ideal for children memorizing Surahs — aligned with our online Madani Qaida and Hifz programmes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.5rem">
+      <!-- Who is it for -->
+      <div class="glass p-7 reveal" style="transition-delay:0.1s">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:1rem">Who Is This Library For?</h2>
+        <div style="display:flex;flex-direction:column;gap:0.75rem">
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:1.1rem">👶</span>
+            <span style="color:var(--text-sub);font-size:0.875rem"><strong style="color:var(--text)">Children</strong> — learning Quran, Duas and Adhan for the first time</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:1.1rem">📚</span>
+            <span style="color:var(--text-sub);font-size:0.875rem"><strong style="color:var(--text)">Online Students</strong> — enrolled in Kanzulilm's Tajweed and Hifz courses</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:1.1rem">🏠</span>
+            <span style="color:var(--text-sub);font-size:0.875rem"><strong style="color:var(--text)">Families</strong> — seeking authentic Islamic audio for daily use at home</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:1.1rem">🕌</span>
+            <span style="color:var(--text-sub);font-size:0.875rem"><strong style="color:var(--text)">Mosque Communities</strong> — requiring verified Adhan recordings</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:1.1rem">🌍</span>
+            <span style="color:var(--text-sub);font-size:0.875rem"><strong style="color:var(--text)">Global Muslims</strong> — in UK, USA, Canada, Australia &amp; worldwide</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem">
+            <span style="font-size:1.1rem">🔁</span>
+            <span style="color:var(--text-sub);font-size:0.875rem"><strong style="color:var(--text)">Reverts to Islam</strong> — learning authentic pronunciation from scratch</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="glass p-7 reveal" style="transition-delay:0.2s">
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:1rem">Our Scholarly Standards</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+          <div style="background:rgba(212,175,55,0.05);border:1px solid rgba(212,175,55,0.15);border-radius:0.875rem;padding:0.875rem;text-align:center">
+            <div style="font-size:1.25rem;margin-bottom:0.4rem">🎓</div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:0.2rem">Certified Huffaz</div>
+            <div style="font-size:0.72rem;color:var(--text-mute)">Ijazah-verified reciters</div>
+          </div>
+          <div style="background:rgba(212,175,55,0.05);border:1px solid rgba(212,175,55,0.15);border-radius:0.875rem;padding:0.875rem;text-align:center">
+            <div style="font-size:1.25rem;margin-bottom:0.4rem">📜</div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:0.2rem">Mufti Supervision</div>
+            <div style="font-size:0.72rem;color:var(--text-mute)">Dars-e-Nizami scholars</div>
+          </div>
+          <div style="background:rgba(212,175,55,0.05);border:1px solid rgba(212,175,55,0.15);border-radius:0.875rem;padding:0.875rem;text-align:center">
+            <div style="font-size:1.25rem;margin-bottom:0.4rem">🔊</div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:0.2rem">Studio Quality</div>
+            <div style="font-size:0.72rem;color:var(--text-mute)">High-fidelity recordings</div>
+          </div>
+          <div style="background:rgba(212,175,55,0.05);border:1px solid rgba(212,175,55,0.15);border-radius:0.875rem;padding:0.875rem;text-align:center">
+            <div style="font-size:1.25rem;margin-bottom:0.4rem">✅</div>
+            <div style="font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:0.2rem">Est. 2009</div>
+            <div style="font-size:0.72rem;color:var(--text-mute)">15+ years of trust</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ENROL CTA ═══ -->
+<div class="impact-strip py-14 relative z-10">
+  <div class="max-w-3xl mx-auto px-5 text-center reveal">
+    <div class="arabic-divider" style="font-size:1.75rem;margin-bottom:1.25rem"></div>
+    <p style="color:var(--gold1);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:0.75rem">While You Wait — Start Learning Today</p>
+    <h2 class="section-title mb-4">Join Our Live 1-on-1<br/><span class="gold-text">Quran &amp; Islamic Classes.</span></h2>
+    <p style="color:var(--text-sub);font-size:0.9rem;line-height:1.75;margin-bottom:2rem;max-width:34rem;margin-left:auto;margin-right:auto">
+      Don't wait for the audio library to launch — enrol in live, personalized Quran, Tajweed, Arabic, and Dars-e-Nizami classes with our certified scholars via WhatsApp. Free trial available for all worldwide students.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="https://wa.me/923244449333?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%DB%83%20%D8%A7%D9%84%D9%84%DB%81%20%D9%88%D8%A8%D8%B1%DA%A9%D8%A7%D8%AA%DB%81%0AI%20would%20like%20to%20book%20a%20free%20trial%20class."
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:0.6rem;background:linear-gradient(to right,var(--gold1),var(--gold2));color:#020617;font-weight:700;padding:0.9rem 2rem;border-radius:999px;border:none;font-size:0.9rem;text-decoration:none;box-shadow:0 4px 20px rgba(212,175,55,0.35);">
+        <svg width="16" height="16" fill="#020617" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Book Free Trial Class
+      </a>
+      <a href="/enrollment"
+         style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(255,255,255,0.06);border:1px solid rgba(212,175,55,0.35);color:var(--gold1);font-weight:500;padding:0.9rem 2rem;border-radius:999px;font-size:0.9rem;text-decoration:none;">
+        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+        Enrollment Page
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:var(--footer-bg);border-top:1px solid rgba(212,175,55,0.2);position:relative;z-index:10">
+  <div class="max-w-7xl mx-auto px-5 py-12">
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <!-- Brand -->
+      <div>
+        <div style="display:flex;align-items:center;gap:0.625rem;margin-bottom:1rem">
+          <div class="w-9 h-9 rounded-full border flex items-center justify-center" style="border-color:rgba(212,175,55,0.4);background:rgba(212,175,55,0.1)">
+            <span class="urdu" style="color:var(--gold2);font-size:1.1rem;font-weight:700">کنزالعلم</span>
+          </div>
+          <div>
+            <div style="color:var(--text);font-weight:600;font-size:0.875rem">Kanzulilm International</div>
+            <div style="color:var(--gold1);font-size:0.625rem;letter-spacing:0.15em;opacity:0.6;text-transform:uppercase">Treasury of Knowledge</div>
+          </div>
+        </div>
+        <p style="color:var(--text-mute);font-size:0.8125rem;line-height:1.7">Preserving, protecting, and disseminating authentic classical Islamic sciences for a modern world under elite scholarly supervision.</p>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <p style="color:var(--gold1);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:1rem;font-weight:600;">QUICK LINKS</p>
+        <div class="footer-links-column" style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.8125rem;">
+          <a href="/#legacy" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">About Legacy</a>
+          <a href="/#courses" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Our Courses</a>
+          <a href="/#fees" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Tuition Fees</a>
+          <a href="/#testimonials" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Student Reviews</a>
+          <a href="/about" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">About Us</a>
+          <a href="/enrollment" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Enrollment</a>
+          <a href="/faculty" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Our Faculty</a>
+          <a href="/faq" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">FAQs</a>
+          <a href="/privacy" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Privacy Policy</a>
+          <a href="/terms" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Terms of Use</a>
+          <a href="/disclaimer" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Disclaimer</a>
+          <div style="border-top:1px solid rgba(212,175,55,0.12);margin:0.4rem 0 0.2rem;padding-top:0.6rem;">
+            <p style="color:var(--gold1);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.6;font-weight:600;margin-bottom:0.45rem;">Course Pages</p>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <a href="/madani-qaida" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Madani Qaida &amp; Nazra</a>
+              <a href="/tajweed-course" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Tajweed Course</a>
+              <a href="/dars-e-nizami" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Dars-e-Nizami</a>
+              <a href="/arabic-course" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Arabic Language</a>
+              <a href="/nahw-course" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Nahw (Arabic Grammar)</a>
+              <a href="/sarf-course" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Sarf (Arabic Morphology)</a>
+              <a href="/persian-farsi-course" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Persian (Farsi)</a>
+              <a href="/quran-translation" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Quran Translation</a>
+              <a href="/quran-tafseer" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Quran Tafseer</a>
+              <a href="/seerah-course" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Seerah Course</a>
+              <a href="/prophet-biography" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Prophet Biography</a>
+              <a href="/online-istikhara" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Online Istikhara</a>
+              <a href="/rohani-ilaj" style="color:var(--text-mute);text-decoration:none;width:max-content;display:inline-block;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">Rohani Ilaj</a>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(212,175,55,0.12);margin:0.4rem 0 0.2rem;padding-top:0.6rem;">
+            <p style="color:var(--gold1);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.6;font-weight:600;margin-bottom:0.45rem;">Academic Tools</p>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <a href="https://www.api.kanzulilm.com/" target="_blank" rel="noopener" style="color:var(--text-mute);text-decoration:none;display:inline-flex;align-items:center;gap:0.45rem;width:max-content;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                Kanz ul Ilm Quran Navigator
+              </a>
+              <a href="https://morphology.kanzulilm.com/" target="_blank" rel="noopener" style="color:var(--text-mute);text-decoration:none;display:inline-flex;align-items:center;gap:0.45rem;width:max-content;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                Word-by-Word Quran Morphology
+              </a>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(212,175,55,0.12);margin:0.4rem 0 0.2rem;padding-top:0.6rem;">
+            <p style="color:var(--gold1);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.6;font-weight:600;margin-bottom:0.45rem;">Contact</p>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <a href="mailto:admissions@kanzulilm.com" style="color:var(--text-mute);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;width:max-content;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                admissions@kanzulilm.com
+              </a>
+              <a href="mailto:info@kanzulilm.com" style="color:var(--text-mute);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;width:max-content;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                info@kanzulilm.com
+              </a>
+              <a href="mailto:office@kanzulilm.com" style="color:var(--text-mute);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;width:max-content;" onmouseover="this.style.color='var(--gold1)'" onmouseout="this.style.color='var(--text-mute)'">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                office@kanzulilm.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Global Note -->
+      <div>
+        <p style="color:var(--gold1);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:1rem">Global Operations</p>
+        <p style="color:var(--text-mute);font-size:0.8125rem;line-height:1.7">Optimized for global students across UK, USA, Canada, Australia, Europe, and worldwide. 1-on-1 official WhatsApp support available across all major time zones.</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(212,175,55,0.1);padding-top:1.5rem;padding-bottom:3.5rem;text-align:center;color:var(--text-mute);font-size:0.75rem">
+      &copy; <span id="current-year-footer"></span> Kanzulilm International. All Rights Reserved. Managed under traditional scholarly standards.
+    </div>
+  </div>
+<!-- SEO Footer Text -->
+<p style="font-size: 12px; color: #999999; text-align: center; margin-top: 10px;">
+Kanzulilm International | Kanz-ul-Ilm International | Kanzul Ilm International | Kanz ul Ilm International | Kanz-ul-Ilm | Kanzulilm | Kanzul Ilm | Kanz ul Ilm | کنزالعلم انٹرنیشنل | کنزالعلم | Official Website: kanzulilm.com
+</p>
+</footer>
+
+<!-- ═══ WHATSAPP FAB ═══ -->
+<a href="https://wa.me/923244449333?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%DB%83%20%D8%A7%D9%84%D9%84%DB%81%20%D9%88%D8%A8%D8%B1%DA%A9%D8%A7%D8%AA%DB%81%0AI%20found%20Kanzulilm%20online%20and%20would%20like%20to%20know%20more."
+   target="_blank" rel="noopener" class="wa-fab" aria-label="Chat on WhatsApp">
+  <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ═══ SCROLL TO TOP ═══ -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+  <i data-lucide="chevron-up" class="w-5 h-5"></i>
+</button>
+
+<!-- ═══ ARTICLES MODAL ═══ -->
+<div id="articles-modal" onclick="if(event.target===this)closeArticles()">
+  <div class="modal-box">
+    <div class="arabic-divider mb-4" style="font-size:2rem">📚</div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;margin-bottom:0.75rem" class="gold-text">Kanzulilm Academic Journal</h3>
+    <div style="width:3rem;height:2px;background:linear-gradient(to right,var(--gold1),var(--gold2));margin:0 auto 1.25rem"></div>
+    <p style="color:var(--text-sub);font-size:0.9375rem;line-height:1.7;margin-bottom:0.75rem"><strong style="color:var(--text)">Scholarly Blogs — Coming Soon</strong></p>
+    <p style="color:var(--text-mute);font-size:0.875rem;line-height:1.7;margin-bottom:2rem">We are currently preparing high-quality articles on Arabic linguistics, traditional Islamic jurisprudence, and Quranic sciences under elite scholarly supervision.</p>
+    <button onclick="closeArticles()" style="background:linear-gradient(to right,var(--gold1),var(--gold2));color:#020617;font-weight:600;padding:0.75rem 2rem;border-radius:999px;border:none;cursor:pointer;font-size:0.875rem">Close</button>
+  </div>
+</div>
+
+<!-- ═══ PWA INSTALL BANNER ═══ -->
+<div id="pwa-banner">
+  <div style="display:flex;align-items:center;gap:0.75rem;justify-content:space-between;flex-wrap:wrap">
+    <p style="color:var(--text);font-size:0.875rem;font-weight:500">📱 Install Kanzulilm App for a seamless 1-on-1 classroom experience.</p>
+    <div style="display:flex;gap:0.5rem">
+      <button id="pwa-install-btn" aria-label="Install Kanzulilm App" style="background:linear-gradient(to right,var(--gold1),var(--gold2));color:#020617;font-weight:600;padding:0.5rem 1rem;border-radius:999px;border:none;cursor:pointer;font-size:0.8rem">Install</button>
+      <button onclick="document.getElementById('pwa-banner').style.display='none'" aria-label="Close install banner" style="background:transparent;border:1px solid rgba(212,175,55,0.3);color:var(--text-mute);padding:0.5rem 0.75rem;border-radius:999px;cursor:pointer;font-size:0.8rem">✕</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ COOKIE BANNER ═══ -->
+<div id="cookie-banner">
+  <div style="max-width:42rem;margin:0 auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:space-between">
+    <p style="color:var(--text-sub);font-size:0.8125rem;line-height:1.6">We use cookies to enhance your experience. By continuing, you agree to our <a href="/privacy" style="color:var(--gold1);text-decoration:underline">Privacy Policy</a>.</p>
+    <button onclick="acceptCookies()" style="background:linear-gradient(to right,var(--gold1),var(--gold2));color:#020617;font-weight:600;padding:0.5rem 1.25rem;border-radius:999px;border:none;cursor:pointer;font-size:0.8rem;white-space:nowrap">Accept</button>
+  </div>
+</div>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+  lucide.createIcons();
+
+  var yr = new Date().getFullYear();
+  document.getElementById('current-year-banner').textContent = yr;
+  document.getElementById('current-year-footer').textContent = yr;
+
+  // Scroll Reveal
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+
+  // Navbar tint
+  function updateNavbarTint() {
+    var nav = document.getElementById('navbar');
+    var st = document.getElementById('scroll-top');
+    if (window.scrollY > 60) {
+      nav.style.background = document.documentElement.getAttribute('data-theme') === 'light'
+        ? 'rgba(248,246,240,0.96)' : 'rgba(2,6,23,0.95)';
+      st.classList.add('visible');
+    } else {
+      nav.style.background = 'var(--nav-bg)';
+      st.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll', updateNavbarTint);
+
+  // Dark/Light Toggle
+  function toggleTheme() {
+    var html = document.documentElement;
+    var isLight = html.getAttribute('data-theme') === 'light';
+    html.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    localStorage.setItem('kl-theme', isLight ? 'dark' : 'light');
+    updateThemeIcon(); updateNavbarTint();
+  }
+  function updateThemeIcon() {
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    var ic = document.getElementById('theme-icon');
+    ic.setAttribute('data-lucide', isLight ? 'moon' : 'sun');
+    lucide.createIcons();
+  }
+  (function() {
+    var saved = localStorage.getItem('kl-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeIcon();
+  })();
+
+  // Articles Modal
+  function openArticles(e) { if (e) e.preventDefault(); document.getElementById('articles-modal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeArticles() { document.getElementById('articles-modal').classList.remove('open'); document.body.style.overflow = ''; }
+
+  // Cookie Banner
+  function acceptCookies() {
+    localStorage.setItem('kl-cookies', '1');
+    document.getElementById('cookie-banner').classList.remove('show');
+  }
+  (function() {
+    if (!localStorage.getItem('kl-cookies')) {
+      setTimeout(function() { document.getElementById('cookie-banner').classList.add('show'); }, 2000);
+    }
+  })();
+
+  // PWA Install
+  var deferredPrompt;
+  window.addEventListener('beforeinstallprompt', function(e) {
+    e.preventDefault(); deferredPrompt = e;
+    var banner = document.getElementById('pwa-banner');
+    if (banner) banner.style.display = 'block';
+  });
+  var installBtn = document.getElementById('pwa-install-btn');
+  if (installBtn) {
+    installBtn.addEventListener('click', function() {
+      if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(function() { deferredPrompt = null; }); }
+      document.getElementById('pwa-banner').style.display = 'none';
+    });
+  }
+
+  // Notify Me
+  function handleNotify() {
+    var email = document.getElementById('notify-email').value.trim();
+    var success = document.getElementById('notify-success');
+    if (!email || !email.includes('@')) {
+      document.getElementById('notify-email').style.borderColor = 'rgba(212,100,100,0.6)';
+      return;
+    }
+    document.getElementById('notify-email').style.borderColor = 'rgba(212,175,55,0.6)';
+    success.style.display = 'block';
+    document.getElementById('notify-email').value = '';
+    var wa = 'https://wa.me/923244449333?text=' + encodeURIComponent('السلام علیکم ورحمۃ اللہ وبرکاتہ\nI would like to be notified when the Kanzulilm Islamic Audio Library launches.\nEmail: ' + email);
+    setTimeout(function() { window.open(wa, '_blank'); }, 800);
+  }
+
+  // Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
+  }
+</script>
+</body>
+</html>

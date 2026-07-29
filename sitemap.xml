@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!--
+  ═══════════════════════════════════════════════════════════════════════════
+  KANZULILM INTERNATIONAL — XML SITEMAP
+  Website  : https://kanzulilm.com
+  Founded  : 2009 CE
+  Founder  : Mufti Syed Muhammad Usman Bukhari
+  Coverage : USA · UK · Canada · Australia · Pakistan · Worldwide
+  ═══════════════════════════════════════════════════════════════════════════
+  STRUCTURE
+  ─────────────────────────────────────────────────────────────────────────
+  01. Homepage
+  02. Quran & Foundational Courses
+  03. Classical Islamic Scholarship (Dars-e-Nizami)
+  04. Spiritual Services
+  05. Educational Articles
+  06. Institutional Pages
+  07. Legal & Policy Pages (English)
+  08. Legal & Policy Pages (Urdu)
+  ═══════════════════════════════════════════════════════════════════════════
+  -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 01 · HOMEPAGE
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 02 · QURAN & FOUNDATIONAL COURSES
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/madani-qaida</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/madani-qaida"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/madani-qaida"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/tajweed-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/tajweed-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/tajweed-course"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/quran-translation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/quran-translation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/quran-translation"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/quran-tafseer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/quran-tafseer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/quran-tafseer"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 03 · CLASSICAL ISLAMIC SCHOLARSHIP
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/dars-e-nizami</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/dars-e-nizami"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/dars-e-nizami"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/arabic-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/arabic-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/arabic-course"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/nahw-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/nahw-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/nahw-course"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/sarf-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/sarf-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/sarf-course"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/persian-farsi-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/persian-farsi-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/persian-farsi-course"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/seerah-course</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/seerah-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/seerah-course"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 04 · SPIRITUAL SERVICES
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/online-istikhara</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/online-istikhara"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/online-istikhara"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/rohani-ilaj</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/rohani-ilaj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/rohani-ilaj"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 05 · EDUCATIONAL ARTICLES
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/prophet-biography</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/prophet-biography"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/prophet-biography"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 06 · INSTITUTIONAL PAGES
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/about</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/about"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/faculty</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/faculty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/faculty"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/enrollment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/enrollment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/enrollment"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/faq"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 07 · LEGAL & POLICY PAGES — ENGLISH
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://kanzulilm.com/privacy-ur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/privacy"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://kanzulilm.com/terms-ur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/terms"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/disclaimer"/>
+  </url>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 08 · LEGAL & POLICY PAGES — URDU
+       ═══════════════════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://kanzulilm.com/privacy-ur</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://kanzulilm.com/privacy-ur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/privacy"/>
+  </url>
+
+  <url>
+    <loc>https://kanzulilm.com/terms-ur</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://kanzulilm.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="ur"        href="https://kanzulilm.com/terms-ur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kanzulilm.com/terms"/>
+  </url>
+
+
+</urlset>

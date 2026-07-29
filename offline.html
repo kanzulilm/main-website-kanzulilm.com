@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Are Offline | Kanzulilm International</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#020617" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Kanzulilm" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/androidchrome192x192.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/androidchrome192x192.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══ CSS VARIABLES — DARK (default) ═══ */
+    :root {
+      --bg:          #020617;
+      --bg2:         #0a1628;
+      --bg3:         #0f1e35;
+      --card-bg:     rgba(255,255,255,0.04);
+      --card-border: rgba(212,175,55,0.18);
+      --text:        #f0f4ff;
+      --text-sub:    #c0c8d8;
+      --text-mute:   rgba(192,200,216,0.55);
+      --gold1:       #f7e0a3;
+      --gold2:       #d4af37;
+      --gold3:       #b8860b;
+      --shadow-card: 0 24px 60px rgba(212,175,55,0.15);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      padding: 1.25rem 1rem;
+    }
+
+    /* ═══ AMBIENT BACKGROUND ═══ */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(212,175,55,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(10,22,40,0.9) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ═══ FLOATING PARTICLES ═══ */
+    .particles {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: var(--gold2);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float-up linear infinite;
+    }
+    .particle:nth-child(1)  { left:8%;   animation-duration:12s; animation-delay:0s;   width:1px; height:1px; }
+    .particle:nth-child(2)  { left:18%;  animation-duration:9s;  animation-delay:1.5s; }
+    .particle:nth-child(3)  { left:28%;  animation-duration:14s; animation-delay:0.8s; width:3px; height:3px; opacity:0; }
+    .particle:nth-child(4)  { left:42%;  animation-duration:10s; animation-delay:3s; }
+    .particle:nth-child(5)  { left:55%;  animation-duration:13s; animation-delay:0.5s; width:1px; height:1px; }
+    .particle:nth-child(6)  { left:65%;  animation-duration:8s;  animation-delay:2s; }
+    .particle:nth-child(7)  { left:75%;  animation-duration:11s; animation-delay:1s;   width:3px; height:3px; }
+    .particle:nth-child(8)  { left:85%;  animation-duration:15s; animation-delay:4s; }
+    .particle:nth-child(9)  { left:92%;  animation-duration:9s;  animation-delay:2.5s; width:1px; height:1px; }
+    .particle:nth-child(10) { left:35%;  animation-duration:12s; animation-delay:6s; }
+    @keyframes float-up {
+      0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+      10%  { opacity: 0.4; }
+      90%  { opacity: 0.15; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    /* ═══ MAIN CARD ═══ */
+    .offline-card {
+      position: relative; z-index: 10;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      backdrop-filter: blur(24px) saturate(160%);
+      border-radius: 2rem;
+      padding: 1.75rem 2.5rem;
+      max-width: 540px;
+      width: calc(100% - 2rem);
+      max-height: calc(100vh - 2.5rem);
+      overflow-y: auto;
+      overflow-x: hidden;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      animation: card-enter 0.7s cubic-bezier(.22,.68,0,1.2) both;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .offline-card::-webkit-scrollbar { display: none; }
+    @keyframes card-enter {
+      from { opacity: 0; transform: translateY(40px) scale(0.97); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* Shimmer sweep */
+    .offline-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -110%;
+      width: 60%; height: 100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(247,224,163,0.06) 50%, transparent 100%);
+      transform: skewX(-20deg);
+      animation: shimmer 4s ease-in-out infinite 1s;
+      pointer-events: none;
+      border-radius: 2rem;
+    }
+    @keyframes shimmer {
+      0%,100% { left: -110%; }
+      50%      { left: 130%; }
+    }
+
+    /* ═══ SIGNAL ICON ═══ */
+    .signal-wrap {
+      width: 72px; height: 72px;
+      margin: 0 auto 1.25rem;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      animation: pulse-glow 2.8s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+      0%,100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.3); }
+      50%      { box-shadow: 0 0 0 18px rgba(212,175,55,0); }
+    }
+    .signal-wrap svg {
+      width: 40px; height: 40px;
+      color: var(--gold1);
+    }
+
+    /* ═══ ARABIC DIVIDER ═══ */
+    .arabic-divider {
+      font-family: 'Amiri', serif;
+      font-size: 1.5rem;
+      color: rgba(212,175,55,0.6);
+      letter-spacing: 0.2em;
+      margin: 0 0 1rem;
+    }
+
+    /* ═══ GOLD LINE ═══ */
+    .gold-line {
+      width: 4rem; height: 2px;
+      background: linear-gradient(to right, var(--gold1), var(--gold2));
+      margin: 0.75rem auto;
+      border-radius: 2px;
+    }
+
+    /* ═══ TYPOGRAPHY ═══ */
+    .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold2);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      background: linear-gradient(to right, var(--gold1), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      font-size: 0.975rem;
+      color: var(--text-sub);
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
+    }
+    .hint {
+      font-size: 0.82rem;
+      color: var(--text-mute);
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ═══ CHECKLIST ═══ */
+    .checklist {
+      list-style: none;
+      text-align: left;
+      background: rgba(212,175,55,0.04);
+      border: 1px solid rgba(212,175,55,0.1);
+      border-radius: 1rem;
+      padding: 0.85rem 1.25rem;
+      margin: 0 0 1.25rem;
+    }
+    .checklist li {
+      font-size: 0.875rem;
+      color: var(--text-sub);
+      padding: 0.3rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      line-height: 1.6;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--gold2);
+      font-weight: 700;
+    }
+
+    /* ═══ BUTTONS ═══ */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, var(--gold1), var(--gold2));
+      color: #020617;
+      box-shadow: 0 4px 20px rgba(212,175,55,0.3);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 6px 30px rgba(212,175,55,0.5), 0 0 60px rgba(212,175,55,0.2);
+      transform: translateY(-2px);
+    }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(212,175,55,0.35);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      color: var(--gold1);
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+    .btn-secondary:hover {
+      border-color: rgba(212,175,55,0.7);
+      box-shadow: 0 0 24px rgba(212,175,55,0.3);
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-1px);
+    }
+
+    /* ═══ STATUS DOT ═══ */
+    .status-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-mute);
+    }
+    .status-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #ef4444;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.25; }
+    }
+    .status-dot.online { background: #4ade80; animation: none; }
+
+    /* ═══ FOOTER BRAND ═══ */
+    .brand-footer {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-mute);
+      letter-spacing: 0.05em;
+    }
+    .brand-sub {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.75);
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 480px) {
+      .offline-card { padding: 1.5rem 1.25rem; border-radius: 1.5rem; }
+      h1 { font-size: 1.9rem; }
+      .signal-wrap { width: 60px; height: 60px; margin-bottom: 1rem; }
+      .checklist li { font-size: 0.82rem; }
+    }
+    @media (max-height: 700px) {
+      .offline-card { padding: 1.25rem 2rem; }
+      .signal-wrap { width: 56px; height: 56px; margin-bottom: 0.6rem; }
+      .arabic-divider { margin: 0 0 0.6rem; font-size: 1.1rem; }
+      .gold-line { margin: 0.5rem auto; }
+      .checklist { padding: 0.6rem 1rem; margin-bottom: 0.75rem; }
+      .checklist li { padding: 0.2rem 0; font-size: 0.8rem; }
+      .brand-footer { margin-top: 0.6rem; }
+      .subtitle { margin-bottom: 0.25rem; }
+    }
+    @media (max-height: 600px) {
+      body { padding: 0.75rem 1rem; }
+      .offline-card { padding: 1rem 1.75rem; border-radius: 1.5rem; }
+      .signal-wrap { width: 48px; height: 48px; margin-bottom: 0.5rem; }
+      h1 { font-size: 1.7rem; }
+      .label { margin-bottom: 0.4rem; }
+      .checklist { margin-bottom: 0.6rem; }
+      .status-row { margin-top: 0.6rem; }
+      .brand-footer { margin-top: 0.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Ambient Particles -->
+<div class="particles" aria-hidden="true">
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+
+<!-- Main Card -->
+<main class="offline-card" role="main">
+
+  <div class="arabic-divider" aria-hidden="true">﷽</div>
+
+  <!-- Signal Icon -->
+  <div class="signal-wrap" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="1" y1="1" x2="23" y2="23"/>
+      <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/>
+      <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/>
+      <path d="M10.71 5.05A16 16 0 0 1 22.56 9"/>
+      <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/>
+      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+      <circle cx="12" cy="20" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
+
+  <p class="label">Connection Lost</p>
+
+  <h1>You Are Offline</h1>
+
+  <div class="gold-line"></div>
+
+  <p class="subtitle">
+    It appears your device is not connected to the internet at this moment.
+  </p>
+  <p class="hint">
+    Please check your connection and try again. Your progress has been saved and the academy will be ready when you return.
+  </p>
+
+  <ul class="checklist" aria-label="Troubleshooting steps">
+    <li>Check your Wi-Fi or mobile data connection</li>
+    <li>Disable and re-enable Airplane Mode if active</li>
+    <li>Move closer to your router for a stronger signal</li>
+    <li>Try refreshing the page once connected</li>
+  </ul>
+
+  <button class="btn-primary" onclick="retryConnection()" id="retry-btn" aria-label="Retry connection">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="23 4 23 10 17 10"/>
+      <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+    </svg>
+    <span id="retry-label">Try Again</span>
+  </button>
+
+  <a href="https://wa.me/923244449333?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%DB%8C%DA%A9%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%DB%83%20%D8%A7%D9%84%D9%84%DB%81%20%D9%88%D8%A8%D8%B1%DA%A9%D8%A7%D8%AA%DB%81%0AI%20need%20assistance%20with%20Kanzulilm%20portal."
+     target="_blank" rel="noopener"
+     class="btn-secondary"
+     aria-label="Contact support on WhatsApp">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Contact Support on WhatsApp
+  </a>
+
+  <!-- Live Status -->
+  <div class="status-row" id="status-row" aria-live="polite">
+    <div class="status-dot" id="status-dot"></div>
+    <span id="status-text">No internet connection detected</span>
+  </div>
+
+  <!-- Brand Footer (inside card) -->
+  <footer class="brand-footer" aria-label="Kanzulilm International">
+    <span class="brand-name">Kanzulilm International</span>
+    <span class="brand-sub">کنزالعلم — The Treasury of Knowledge</span>
+  <!-- SEO Footer Text -->
+<p style="font-size: 12px; color: #999999; text-align: center; margin-top: 10px;">
+Kanzulilm International | Kanz-ul-Ilm International | Kanzul Ilm International | Kanz ul Ilm International | Kanz-ul-Ilm | Kanzulilm | Kanzul Ilm | Kanz ul Ilm | کنزالعلم انٹرنیشنل | کنزالعلم | Official Website: kanzulilm.com
+</p>
+</footer>
+
+</main>
+
+<script>
+  /* ── Retry button with loading state ── */
+  function retryConnection() {
+    var btn   = document.getElementById('retry-btn');
+    var label = document.getElementById('retry-label');
+    var dot   = document.getElementById('status-dot');
+    var text  = document.getElementById('status-text');
+
+    btn.disabled = true;
+    label.textContent = 'Checking…';
+    btn.style.opacity = '0.75';
+
+    setTimeout(function() {
+      if (navigator.onLine) {
+        dot.classList.add('online');
+        text.textContent = 'Connection restored! Redirecting…';
+        label.textContent = 'Connected ✓';
+        setTimeout(function() { window.location.href = '/'; }, 900);
+      } else {
+        label.textContent = 'Still Offline';
+        text.textContent = 'No internet connection detected';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        setTimeout(function() { label.textContent = 'Try Again'; }, 2000);
+      }
+    }, 1400);
+  }
+
+  /* ── Auto-detect when connection returns ── */
+  window.addEventListener('online', function() {
+    var dot  = document.getElementById('status-dot');
+    var text = document.getElementById('status-text');
+    dot.classList.add('online');
+    text.textContent = 'Connection restored! Redirecting…';
+    setTimeout(function() { window.location.href = '/'; }, 1200);
+  });
+
+  window.addEventListener('offline', function() {
+    var dot  = document.getElementById('status-dot');
+    var text = document.getElementById('status-text');
+    dot.classList.remove('online');
+    text.textContent = 'No internet connection detected';
+  });
+</script>
+</body>
+</html>
