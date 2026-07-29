@@ -1,0 +1,11 @@
+# ═══════════════════════════════════════════════════════════
+# KANZULILM INTERNATIONAL — Cloudflare Pages _redirects
+# ═══════════════════════════════════════════════════════════
+
+# ═══ RFC 9116 ═══
+/.well-known/security.txt   /security.txt   200
+
+# ═══ اردو CMS ═══
+/articles/ur/admin    /articles/ur/admin/index.html   200
+/articles/ur          /articles/ur/index.html         301
+/articles/ur/:splat   /articles/ur/index.html         200
