@@ -1,10 +1,14 @@
 # ═══════════════════════════════════════════════════════════
-# KANZULILM INTERNATIONAL — Cloudflare Pages _redirects
+# KANZULILM INTERNATIONAL — _redirects (English section added)
 # ═══════════════════════════════════════════════════════════
-# ⚠️ /articles/ur/* کا کوئی اصول یہاں نہ لکھیں۔
-#    وہ کام اب functions/articles/ur/[[path]].js کرتا ہے۔
-#    _redirects میں لکھنے سے Cloudflare "Infinite loop" کہہ کر
-#    اصول نظرانداز کر دیتا تھا → ریفریش پر 404 آتا تھا۔
 
 # ═══ RFC 9116 ═══
 /.well-known/security.txt   /security.txt   200
+
+# ═══ اردو CMS ═══
+/articles/ur/admin    /articles/ur/admin/index.html   200
+/articles/ur/:splat   /articles/ur/index.html         200
+
+# ═══ English CMS ═══
+/articles/en/admin    /articles/en/admin/index.html   200
+/articles/en/:splat   /articles/en/index.html         200

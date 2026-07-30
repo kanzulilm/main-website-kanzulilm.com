@@ -1,0 +1,3 @@
+English articles do not require Urdu fonts.
+You may add English or Arabic fonts here if needed.
+For now the portal uses Google Fonts (Cormorant Garamond + DM Sans).
