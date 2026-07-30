@@ -424,7 +424,7 @@ window.importCSV = async function() {
   const ghUser  = localStorage.getItem('kanz_gh_user');
   const ghRepo  = localStorage.getItem('kanz_gh_repo');
   const ghToken = localStorage.getItem('kanz_gh_token');
-  const ghPath  = localStorage.getItem('kanz_gh_path') || 'data/content.json';
+  const ghPath  = localStorage.getItem('kanz_gh_path') || 'articles/ur/data/content.json';
   const ghBranch= localStorage.getItem('kanz_gh_branch') || 'main';
 
   if (ghToken && ghUser && ghRepo) {

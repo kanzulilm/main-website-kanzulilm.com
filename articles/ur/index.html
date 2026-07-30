@@ -104,8 +104,17 @@
 
   <link rel="stylesheet" href="/articles/ur/assets/css/main.css">
 
-  <!-- ═══ ADSENSE ═══ -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <!-- ═══ ADSENSE ═══
+       ⚠️ فی الحال بند ہے کیونکہ کلائنٹ آئی ڈی ابھی ڈمی (ca-pub-XXXX…) ہے —
+       ڈمی آئی ڈی کے ساتھ یہ اسکرپٹ ہر صفحے پر کنسول ایرر دیتا تھا۔
+       app.js بھی ڈمی آئی ڈی دیکھ کر اشتہار خود بند رکھتا ہے (line 71)۔
+
+       ⭐ اصل AdSense آئی ڈی ملنے پر:
+         ① نیچے والی سطر سے <!-- اور --> ہٹا دیں
+         ② ca-pub-XXXXXXXXXXXXXXXX کی جگہ اپنی اصل آئی ڈی لکھیں
+         ③ assets/js/app.js کی line 14 میں بھی وہی آئی ڈی لکھیں
+  ═══ -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
 
   <!-- ═══ Structured Data ═══ -->
   <script type="application/ld+json">

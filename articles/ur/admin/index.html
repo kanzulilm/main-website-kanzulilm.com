@@ -249,43 +249,43 @@ a{color:inherit;text-decoration:none}
 @font-face {
   font-family: 'Jameel Noori Nastaleeq';
   src: local('Jameel Noori Nastaleeq'),
-       url('/assets/fonts/JameelNooriNastaleeq.woff2') format('woff2'),
-       url('/assets/fonts/JameelNooriNastaleeq.ttf')   format('truetype');
+       url('/articles/ur/assets/fonts/JameelNooriNastaleeq.woff2') format('woff2'),
+       url('/articles/ur/assets/fonts/JameelNooriNastaleeq.ttf')   format('truetype');
   font-display: swap;
 }
 @font-face {
   font-family: 'Naskh Unicode';
   src: local('Naskh Unicode'),
-       url('/assets/fonts/NaskhUnicode.woff2') format('woff2'),
-       url('/assets/fonts/NaskhUnicode.ttf')   format('truetype');
+       url('/articles/ur/assets/fonts/NaskhUnicode.woff2') format('woff2'),
+       url('/articles/ur/assets/fonts/NaskhUnicode.ttf')   format('truetype');
   font-display: swap;
 }
 @font-face {
   font-family: 'Mehr Nastaliq Web';
   src: local('Mehr Nastaliq Web'),
-       url('/assets/fonts/MehrNastaliqWeb.woff2') format('woff2'),
-       url('/assets/fonts/MehrNastaliqWeb.ttf')   format('truetype');
+       url('/articles/ur/assets/fonts/MehrNastaliqWeb.woff2') format('woff2'),
+       url('/articles/ur/assets/fonts/MehrNastaliqWeb.ttf')   format('truetype');
   font-display: swap;
 }
 @font-face {
   font-family: 'UL Sajid Heading';
   src: local('UL Sajid Heading'), local('ULSajidHeading'),
-       url('/assets/fonts/ULSajidHeading.woff2') format('woff2'),
-       url('/assets/fonts/ULSajidHeading.ttf')   format('truetype');
+       url('/articles/ur/assets/fonts/ULSajidHeading.woff2') format('woff2'),
+       url('/articles/ur/assets/fonts/ULSajidHeading.ttf')   format('truetype');
   font-display: swap;
 }
 @font-face {
   font-family: 'Nafees Web Naskh';
   src: local('Nafees Web Naskh'),
-       url('/assets/fonts/NafeesWebNaskh.woff2') format('woff2'),
-       url('/assets/fonts/NafeesWebNaskh.ttf')   format('truetype');
+       url('/articles/ur/assets/fonts/NafeesWebNaskh.woff2') format('woff2'),
+       url('/articles/ur/assets/fonts/NafeesWebNaskh.ttf')   format('truetype');
   font-display: swap;
 }
 @font-face {
   font-family: 'Alvi Nastaleeq';
   src: local('Alvi Nastaleeq'),
-       url('/assets/fonts/AlviNastaleeq.woff2') format('woff2'),
-       url('/assets/fonts/AlviNastaleeq.ttf')   format('truetype');
+       url('/articles/ur/assets/fonts/AlviNastaleeq.woff2') format('woff2'),
+       url('/articles/ur/assets/fonts/AlviNastaleeq.ttf')   format('truetype');
   font-display: swap;
 }
 /* ══ System fonts — local() کافی ہے ══ */
@@ -323,7 +323,7 @@ a{color:inherit;text-decoration:none}
     <span id="gh-status-text">GitHub: غیر مربوط</span>
   </div>
   <div style="display:flex;gap:.5rem;align-items:center">
-    <a class="bar-link" href="https://kanzulilm.com/articles/" target="_blank">📚 Portal</a>
+    <a class="bar-link" href="https://kanzulilm.com/articles/ur/" target="_blank">📚 Portal</a>
     <a class="bar-link" href="https://kanzulilm.com" target="_blank">🏛️ Website</a>
     <button class="bar-link" onclick="showPanel('settings')">⚙️ GitHub</button>
     <button class="bar-link" id="theme-toggle-btn" onclick="toggleAdminTheme()" title="تھیم تبدیل کریں">☀️ لائٹ</button>
@@ -733,7 +733,7 @@ a{color:inherit;text-decoration:none}
           <div class="gh-field"><label class="gh-label">GitHub Username</label><input class="gh-input" id="gh-user" placeholder="your-username"></div>
           <div class="gh-field"><label class="gh-label">Repository Name</label><input class="gh-input" id="gh-repo" placeholder="kanz-ul-ilm"></div>
           <div class="gh-field"><label class="gh-label">Branch</label><input class="gh-input" id="gh-branch" placeholder="main" value="main"></div>
-          <div class="gh-field"><label class="gh-label">content.json path</label><input class="gh-input" id="gh-path" placeholder="data/content.json" value="data/content.json"></div>
+          <div class="gh-field"><label class="gh-label">content.json path</label><input class="gh-input" id="gh-path" placeholder="articles/ur/data/content.json" value="articles/ur/data/content.json"></div>
           <div class="gh-field" style="grid-column:1/-1"><label class="gh-label">Personal Access Token (PAT)</label><input class="gh-input" id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxx"></div>
         </div>
         <div style="display:flex;gap:.5rem;margin-top:.85rem;align-items:center">
@@ -996,7 +996,7 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
     <div style="display:flex;gap:1.25rem;font-size:.72rem;flex-wrap:wrap">
-      <a href="https://kanzulilm.com/articles/">📚 Articles Portal</a>
+      <a href="https://kanzulilm.com/articles/ur/">📚 Articles Portal</a>
       <a href="https://kanzulilm.com" target="_blank">🏛️ kanzulilm.com</a>
       <a href="../privacy-policy.html">Privacy Policy</a>
     </div>
@@ -1893,7 +1893,7 @@ async function runArchive(){
 /* ═══ GITHUB ═══ */
 function getGHConfig(){return JSON.parse(localStorage.getItem('kanz_gh')||'{}');}
 function saveGH(){
-  var cfg={user:document.getElementById('gh-user')?.value.trim()||'',repo:document.getElementById('gh-repo')?.value.trim()||'',branch:document.getElementById('gh-branch')?.value.trim()||'main',path:document.getElementById('gh-path')?.value.trim()||'data/content.json',token:document.getElementById('gh-token')?.value.trim()||''};
+  var cfg={user:document.getElementById('gh-user')?.value.trim()||'',repo:document.getElementById('gh-repo')?.value.trim()||'',branch:document.getElementById('gh-branch')?.value.trim()||'main',path:document.getElementById('gh-path')?.value.trim()||'articles/ur/data/content.json',token:document.getElementById('gh-token')?.value.trim()||''};
   if(!cfg.user||!cfg.repo||!cfg.token){notify('تمام خانے پُر کریں!',true);return;}
   localStorage.setItem('kanz_gh',JSON.stringify(cfg));updateGHUI(true,cfg);notify('GitHub ترتیبات محفوظ!');
 }

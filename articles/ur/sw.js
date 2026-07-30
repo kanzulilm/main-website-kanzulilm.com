@@ -3,7 +3,7 @@
    Service Worker v5.0 — scope: /articles/ur/
    ================================================================ */
 
-const VERSION    = 'v6-ur';
+const VERSION    = 'v7-ur';
 const CACHE      = `kanz-${VERSION}`;
 const CACHE_DATA = `kanz-data-${VERSION}`;
 

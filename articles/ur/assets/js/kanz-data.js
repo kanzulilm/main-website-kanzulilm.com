@@ -56,7 +56,7 @@ window.__KANZ_DATA__ = {
       "type": "website",
       "author": ["Kanz ul Ilm International"],
       "title": "Articles Portal",
-      "url": "https://kanzulilm.com/articles/",
+      "url": "https://kanzulilm.com/articles/ur/",
       "accessed": "2026-07-07",
       "year": 2026
     }
@@ -174,10 +174,10 @@ window.__KANZ_DATA__ = {
       "hasPdf": true,
       "seo": {
         "metaDescription": "نماز میں دو سجدوں کے درمیان بیٹھنے کی مقدار اور فقہی احکام",
-        "canonicalUrl": "https://kanzulilm.com/articles/art-001",
+        "canonicalUrl": "https://kanzulilm.com/articles/ur/art-001",
         "ogTitle": "دو سجدوں کے درمیان کتنی دیر بیٹھنا ضروری ہے؟",
         "ogDescription": "فقہ حنفی کے مطابق جلسہ بین السجدتین کا مکمل بیان",
-        "ogImage": "https://kanzulilm.com/assets/icons/icon-512.png"
+        "ogImage": "https://kanzulilm.com/articles/ur/assets/icons/icon-512.png"
       },
       "citations": ["ref-001"],
       "footnotes": [

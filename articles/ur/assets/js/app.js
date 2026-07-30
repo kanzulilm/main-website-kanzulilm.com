@@ -288,7 +288,7 @@ function isPublic(a) {
   }
   if (a.date) {                                          // مستقبل کی تاریخ
     const d = new Date(a.date).getTime();
-    if (isFinite(d) && d > Date.now() + 864e5 * 2) return false;
+    if (isFinite(d) && d > Date.now() + 864e5) return false;
   }
   return true;
 }
@@ -1455,7 +1455,7 @@ function injectFooter() {
       <div class="site-footer-brand">
         <div class="site-footer-logo">
           <div class="site-footer-logo-img">
-            <img src="/assets/icons/icon-192.png" width="48" height="48" loading="lazy"
+            <img src="/articles/ur/assets/icons/icon-192.png" width="48" height="48" loading="lazy"
                  alt="Kanz ul Ilm International Logo"
                  onerror="this.parentElement.style.background='#1a4731';this.style.display='none'">
           </div>
@@ -1838,10 +1838,15 @@ function applyArticleSEO(article) {
   if (seo.ogTitle)       setMeta('og:title', seo.ogTitle);
   if (seo.ogDescription) setMeta('og:description', seo.ogDescription);
   if (seo.ogImage)       setMeta('og:image', seo.ogImage);
-  if (seo.canonicalUrl) {
+  /* ⭐ صرف مکمل http(s) پتہ قبول کریں — ایڈمن میں غلطی سے لکھا گیا
+     ادھورا لفظ (مثلاً "testinga") canonical کو خراب کر دیتا تھا */
+  const validCanonical = (typeof seo.canonicalUrl === 'string' &&
+                          /^https?:\/\//i.test(seo.canonicalUrl.trim()))
+                          ? seo.canonicalUrl.trim() : '';
+  if (validCanonical) {
     let canon = document.getElementById('seo-canonical');
     if (!canon) { canon = document.createElement('link'); canon.id='seo-canonical'; canon.rel='canonical'; document.head.appendChild(canon); }
-    canon.href = seo.canonicalUrl;
+    canon.href = validCanonical;
   }
 
   // ⭐ Article JSON-LD — Rich Results کے لیے
@@ -1852,7 +1857,7 @@ function applyArticleSEO(article) {
     ldEl.id   = 'article-ld-json';
     document.head.appendChild(ldEl);
   }
-  const canonUrl = seo.canonicalUrl || absUrl(routeArticle(article));
+  const canonUrl = validCanonical || absUrl(routeArticle(article));
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
